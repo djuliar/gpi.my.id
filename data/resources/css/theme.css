@@ -1,0 +1,26 @@
+.filament-simple-alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid #bce8f1;
+	border-radius: 4px;
+	color: #31708f;
+	background-color: #d9edf7;
+}
+
+.filament-simple-alert p {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.filament-simple-alert .block {
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+footer.filament {
+	width: 100%;
+    text-align: center !important;
+    padding: 10px;
+    border-top: 1px #eee solid;
+	font-size: 10pt;
+}
