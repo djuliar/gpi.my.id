@@ -1,5 +1,4 @@
 <?php
-// Data sederhana (bisa dikembangkan ke database nanti)
 $nama_perumahan = "Graha Permata Indah Jember";
 $tagline = "Hunian Nyaman, Asri, dan Strategis di Jember";
 ?>
@@ -11,157 +10,98 @@ $tagline = "Hunian Nyaman, Asri, dan Strategis di Jember";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $nama_perumahan; ?></title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        body {
-            line-height: 1.6;
-        }
-
-        header {
-            background: #2c7a7b;
-            color: white;
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            font-size: 20px;
-        }
-
-        nav a {
-            color: white;
-            margin-left: 20px;
-            text-decoration: none;
-        }
-
-        .hero {
-            background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center/cover;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 40px;
-            background: rgba(0,0,0,0.5);
-            padding: 20px;
-        }
-
-        .container {
-            padding: 50px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .feature-box {
-            width: 30%;
-            background: #f4f4f4;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .cta {
-            background: #2c7a7b;
-            color: white;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .cta a {
-            background: white;
-            color: #2c7a7b;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-        }
-
-        @media(max-width: 768px){
-            .feature-box {
-                width: 100%;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c7a7b',
+                    }
+                }
             }
         }
-    </style>
+    </script>
 </head>
-<body>
 
-<header>
-    <h1><?= $nama_perumahan; ?></h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#fasilitas">Fasilitas</a>
-        <a href="#kontak">Kontak</a>
-    </nav>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<header class="bg-primary text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="font-bold text-lg"><?= $nama_perumahan; ?></h1>
+        <nav class="space-x-4">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#tentang" class="hover:underline">Tentang</a>
+            <a href="#fasilitas" class="hover:underline">Fasilitas</a>
+            <a href="#kontak" class="hover:underline">Kontak</a>
+        </nav>
+    </div>
 </header>
 
-<section class="hero">
-    <h2><?= $tagline; ?></h2>
+<!-- Hero -->
+<section class="h-screen bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa');">
+    
+    <div class="bg-black bg-opacity-60 p-10 rounded-xl text-center text-white">
+        <h2 class="text-4xl font-bold mb-4"><?= $tagline; ?></h2>
+        <p class="mb-6">Temukan rumah impian Anda bersama kami</p>
+        <a href="#kontak" class="bg-primary px-6 py-2 rounded-lg hover:bg-teal-700">
+            Hubungi Kami
+        </a>
+    </div>
 </section>
 
-<section class="container" id="tentang">
-    <h2 class="section-title">Tentang Perumahan</h2>
-    <p style="text-align:center;">
-        <?= $nama_perumahan; ?> merupakan kawasan hunian modern di Jember 
-        yang menawarkan kenyamanan, keamanan, dan akses strategis ke pusat kota.
-    </p>
+<!-- Tentang -->
+<section id="tentang" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Tentang Perumahan</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+            <?= $nama_perumahan; ?> merupakan kawasan hunian modern di Jember 
+            dengan konsep minimalis, lingkungan hijau, serta akses strategis 
+            menuju pusat kota dan fasilitas umum.
+        </p>
+    </div>
 </section>
 
-<section class="container" id="fasilitas">
-    <h2 class="section-title">Fasilitas Unggulan</h2>
-    <div class="features">
-        <div class="feature-box">
-            <h3>Keamanan 24 Jam</h3>
-            <p>Lingkungan aman dengan sistem keamanan terpadu.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Lingkungan Asri</h3>
-            <p>Udara segar dengan taman hijau yang nyaman.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Lokasi Strategis</h3>
-            <p>Dekat dengan sekolah, pasar, dan fasilitas umum.</p>
+<!-- Fasilitas -->
+<section id="fasilitas" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Fasilitas Unggulan</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+                <h3 class="font-bold text-xl mb-2">Keamanan 24 Jam</h3>
+                <p class="text-gray-600">Sistem keamanan terpadu dengan penjagaan penuh.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+                <h3 class="font-bold text-xl mb-2">Lingkungan Asri</h3>
+                <p class="text-gray-600">Taman hijau dan udara segar untuk keluarga.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+                <h3 class="font-bold text-xl mb-2">Lokasi Strategis</h3>
+                <p class="text-gray-600">Dekat sekolah, pasar, dan pusat kota.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="cta" id="kontak">
-    <h2>Segera Miliki Hunian Impian Anda</h2>
-    <p>Hubungi kami untuk informasi lebih lanjut</p>
-    <br>
-    <a href="#">Hubungi Kami</a>
+<!-- CTA -->
+<section id="kontak" class="py-16 bg-primary text-white text-center">
+    <h2 class="text-3xl font-bold mb-4">Segera Miliki Hunian Impian Anda</h2>
+    <p class="mb-6">Hubungi kami sekarang untuk info lebih lanjut</p>
+    <a href="#" class="bg-white text-primary px-6 py-2 rounded-lg hover:bg-gray-200">
+        Hubungi Kami
+    </a>
 </section>
 
-<footer>
-    <p>&copy; <?= date("Y"); ?> <?= $nama_perumahan; ?> | All Rights Reserved</p>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; <?= date("Y"); ?> <?= $nama_perumahan; ?>. All Rights Reserved.</p>
 </footer>
 
 </body>
