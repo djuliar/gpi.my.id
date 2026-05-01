@@ -56,11 +56,11 @@ Sistem ini didesain dengan manajemen multi-pengguna yang membagi hak akses ke da
 * Melaporkan tamu menginap atau anggota keluarga yang pindah keluar/masuk.
 
 ## 🛠️ Teknologi yang Digunakan
-*(Silakan ubah bagian ini sesuai dengan *stack* yang Anda gunakan)*
 
 * **Backend**: PHP 8.x / Laravel 12
 * **Frontend**: HTML5, CSS3, Bootstrap 5 / Tailwind CSS
 * **Database**: MySQL / MariaDB
+* **Aplikasi Mobile**: Flutter
 * **Library Tambahan**: DataTables, DomPDF (untuk cetak dokumen), Chart.js (untuk grafik pelaporan)
 
 ## 🚀 Instalasi & Konfigurasi
@@ -69,7 +69,7 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
 
 1. **Clone repositori**
    ```bash
-   git clone [https://github.com/djuliar/gpi.my.id.git](https://github.com/djuliar/gpi.my.id.git)
+   git clone https://github.com/djuliar/gpi.my.id.git
    cd gpi.my.id
 
  2. **Instal dependensi** (Jika menggunakan Composer/Laravel)
@@ -103,19 +103,16 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
 Gunakan akun berikut untuk menguji *role* masing-masing saat *development*:
 | Role | Username / Email | Password |
 |---|---|---|
-| Admin | admin@simtrw.local | password123 |
-| Ketua RW | rw01@simtrw.local | password123 |
-| Ketua RT | rt01@simtrw.local | password123 |
-| Warga | warga@simtrw.local | password123 |
+| Admin | admin@gpi.my.id | password123 |
+| Ketua RW | rw01@gpi.my.id | password123 |
+| Ketua RT | rt01@gpi.my.id | password123 |
+| Warga | warga@gpi.my.id | password123 |
 
-## 🤝 Ucapan Terima Kasih & Tim Pengembang
-Aplikasi ini dikembangkan dalam rangka kegiatan **Pengabdian kepada Masyarakat (PkM)** sebagai wujud kontribusi akademisi terhadap digitalisasi dan tata kelola lingkungan masyarakat.
-
-## 🤝 Kontributor
+## 🤝 Ucapan Terima Kasih & Kontributor
 Proyek ini dikembangkan dalam rangka Pengabdian kepada Masyarakat (PkM) oleh:
  * **Tim Dosen Jurusan Teknologi Informasi**
  * **Mahasiswa Jurusan Teknologi Informasi**
  * **Politeknik Negeri Jember**
-Jika terdapat kendala atau laporan *bug* selama masa implementasi di lingkungan warga, silakan buat laporan pada menu *Issues* di repositori ini.
+sebagai wujud kontribusi akademisi terhadap digitalisasi dan tata kelola lingkungan masyarakat. Jika terdapat kendala atau laporan *bug* selama masa implementasi di lingkungan warga, silakan buat laporan pada menu *Issues* di repositori ini.
 
 *Dibuat dengan ❤️ untuk masyarakat oleh Civitas Akademika Polije.*
